@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+/* font-family: 'Red Hat Display', sans-serif; */
+
+:root{
+    --crl-Pale-blue: hsl(225, 100%, 94%);
+    --crl-Bright-blue: hsl(245, 75%, 52%);
+    --crl-Very-pale-blue: hsl(225, 100%, 98%);
+    --crl-Desaturated-blue: hsl(224, 23%, 55%);
+    --crl-Dark-blue: hsl(223, 47%, 23%);
+
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    height: 100vh;
+    background: url(./images/pattern-background-desktop.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: var(--crl-Pale-blue);
+    font-family: 'Red Hat Display', sans-serif;
+    
+}
+
+/*
+    styling the card container
+*/
+
+.card-container{
+    width: 350px;
+    background-color: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.card-picture img{
+    width: 100%;
+    display: block;
+    
+}
+
+.card-text{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 25px;
+    text-align: center;
+}
+
+.card-title{
+    font-weight: 900;
+    font-size: 22px;
+    color: var(--crl-Dark-blue);
+}
+
+.card-description{
+    font-size: 14px;
+    color: var(--crl-Desaturated-blue);
+}
+
+/*
+    subscription wrapper styling
+*/
+
+.subscription-wrapper{
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--crl-Very-pale-blue);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.music-icon{
+    height: 45px;
+    width: 45px;
+}
+
+.suscription-plan{
+    padding-right: 50px;
+}
+
+#title{
+    font-weight: 900;
+    font-size: 15px;
+}
+
+#price{
+    padding-top: 5px;
+    font-size: 14px;
+    font-size: 700;
+    color: var(--crl-Desaturated-blue);
+}
+
+.change-subscription{
+    padding-top: 12px;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.change-subscription:hover{
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/*
+    call to action button styling
+*/
+
+.call-to-action{
+    border: none;
+    padding: 12px; 
+    font-size: 15px;
+    border-radius: 10px;
+    color: #fff;
+    background-color: var(--crl-Bright-blue);
+    font-weight: 500;
+    box-shadow: 0px 6px 12px var(--crl-Bright-blue);
+}
+.call-to-action:hover{
+    background-color: #5151de;
+    box-shadow: 0px 6px 13px #5151de;
+    cursor: pointer;
+}
+
+
+.cancel-subscription{
+    font-size: 14px;
+    color: var(--crl-Desaturated-blue);
+}
+
+.cancel-subscription:hover{
+    color: var(--crl-Dark-blue);
+    cursor: pointer;
+    font-weight: 900;
+}
+
+@media (max-width: 375px){
+    .card-container{
+        max-width: 90vw;
+    }
+    
+    .card-title{
+        font-size: 19px;
+    }
+    .card-description, #title{
+        font-size: 13px;
+    }
+    .subscription-wrapper{
+        padding: 10px;
+    }
+    .music-icon{
+        height: 40px;
+        width: 40px;
+    }
+    #price{
+        font-size: 12px;
+        padding-top: 2px;
+    }
+    .change-subscription{
+        padding-top: 7px;
+        font-size: 14px;
+    }
+    .call-to-action{
+        padding: 10px 0;
+    }
+}
+
+@media (max-width:327px){
+    .subscription-wrapper{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap:10px;
+       
+    }
+    .suscription-plan{
+        padding-right: 0px;
+    }
+}
